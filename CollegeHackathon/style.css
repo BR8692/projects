@@ -1,0 +1,363 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d1b;
+    color: white;
+}
+
+/* Navigation */
+
+header {
+    background: #0b1224;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, footer h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span, footer span {
+    color: #8b7cff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #c5c9d6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #9b8cff;
+}
+
+.nav-btn, .primary-btn {
+    background: #7659f7;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 580px;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background:
+        radial-gradient(circle at 80% 40%,
+        #29205a, transparent 35%),
+        #080d1b;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag, .section-tag {
+    color: #a18cff;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span, .section h2 span {
+    color: #927cff;
+}
+
+.hero-description {
+    color: #aeb5c7;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.secondary-btn {
+    border: 1px solid #777;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+.hero-card {
+    background: #151c32;
+    border: 1px solid #38305e;
+    border-radius: 18px;
+    padding: 35px;
+    width: 270px;
+    text-align: center;
+    box-shadow: 0 15px 50px #0005;
+}
+
+.card-icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero-card h2 {
+    font-size: 28px;
+    color: #a18cff;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    color: #aeb5c7;
+}
+
+.card-line {
+    height: 2px;
+    background: #51418c;
+    margin: 25px 0;
+}
+
+.hero-card h3 {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Common sections */
+
+.section {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.section-description {
+    color: #aeb5c7;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* About */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature, .detail-card, .domain-card {
+    background: #151c32;
+    border: 1px solid #29314c;
+    padding: 28px;
+    border-radius: 12px;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #aeb5c7;
+    line-height: 1.6;
+}
+
+/* Details */
+
+.details {
+    background: #0d1428;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.detail-card h3 {
+    margin-bottom: 15px;
+}
+
+.detail-card p {
+    color: #aeb5c7;
+}
+
+/* Domains */
+
+.domain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.domain-card {
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    border-color: #927cff;
+}
+
+/* Registration */
+
+.registration {
+    background: #0d1428;
+}
+
+.form-container {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 750px;
+    margin: 35px auto 0;
+    overflow: hidden;
+}
+
+.form-container iframe {
+    display: block;
+    width: 100%;
+    height: 850px;
+    border: none;
+}
+
+/* Contact and footer */
+
+.contact {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #aeb5c7;
+    margin: 10px;
+}
+
+footer {
+    background: #050914;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer p {
+    color: #929bad;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0b1224;
+        flex-direction: column;
+        padding: 25px;
+        gap: 22px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 75px 6%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .features, .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .domain-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section h2 {
+        font-size: 29px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .domain-grid {
+        grid-template-columns: 1fr;
+    }
+}
