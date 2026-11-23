@@ -164,30 +164,217 @@
     </section>
 
     <!-- Registration -->
-    <section class="section registration" id="register">
+    
+<!-- HACKVERSE TEAM MANAGEMENT -->
 
-        <p class="section-tag">SECURE YOUR SPOT</p>
+<section class="section registration" id="register">
 
-        <h2>Ready to <span>Hack?</span></h2>
+    <p class="section-tag">HACKVERSE REGISTRATION</p>
 
-        <p class="section-description">
-            Register your team and become part of
-            an exciting innovation experience.
-        </p>
+    <h2>Build Your <span>Dream Team</span></h2>
 
-        <div class="form-container">
+    <p class="section-description">
+        Register individually, create a team or join
+        an existing team to participate in HackVerse.
+    </p>
 
-            <iframe
-                src='<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSes8Y-mR7t2PyS0Dm_n-5na8w9hlPdd2bDJGGjm8GTQOwr_zQ/viewform?embedded=true" width="640" height="1501" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>'
-                
-            title="Hackathon Registration Form"
-                loading="lazy">
-            </iframe>
+    <!-- ACTION BUTTONS -->
+
+    <div class="action-buttons">
+
+        <button id="registerAction"
+        onclick="showPanel('registerPanel')">
+    👤 Register
+        </button>
+
+        <button id="createAction"
+    onclick="showPanel('createPanel')">
+    👥 Create Team
+        </button>
+
+        <button id="joinAction"
+    onclick="showPanel('joinPanel')">
+    ➕ Join Team
+        </button>
+
+        <button id="leaveButton"
+    onclick="leaveTeam()"
+    hidden>
+    🚪 Leave Team
+        </button>
+
+    </div>
+
+    <div class="form-container">
+
+        <!-- REGISTRATION PANEL -->
+
+        <div id="registerPanel" class="panel">
+
+            <h3>Event Registration</h3>
+
+            <form id="registrationForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input name="full_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>College Name *</label>
+                        <input name="college_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Department *</label>
+                        <select name="department" required>
+                            <option value="">Select Department</option>
+                            <option>Computer Science</option>
+                            <option>Information Technology</option>
+                            <option>Artificial Intelligence</option>
+                            <option>Electronics and Communication</option>
+                            <option>Mechanical Engineering</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Year of Study *</label>
+                        <select name="year_of_study" required>
+                            <option value="">Select Year</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Problem Domain *</label>
+                        <select name="problem_domain" required>
+                            <option value="">Select Domain</option>
+                            <option>Artificial Intelligence</option>
+                            <option>Cybersecurity</option>
+                            <option>Healthcare</option>
+                            <option>Sustainability</option>
+                            <option>Education Technology</option>
+                            <option>Open Innovation</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="registerSubmit">
+                    Complete Registration
+                </button>
+
+            </form>
+
+            <div id="participantResult"></div>
 
         </div>
 
-    </section>
 
+        <!-- CREATE TEAM PANEL -->
+
+        <div id="createPanel" class="panel" hidden>
+
+            <h3>Create Your Team</h3>
+
+            <p>
+                Create a team and invite up to
+                three additional participants.
+            </p>
+
+            <form id="createTeamForm">
+
+                <div class="form-group">
+                    <label>Team Name *</label>
+
+                    <input
+                        type="text"
+                        name="team_name"
+                        placeholder="Enter team name"
+                        required
+                        minlength="2">
+                </div>
+
+                <button type="submit">
+                    Create Team
+                </button>
+
+            </form>
+
+            <div id="createResult"></div>
+
+        </div>
+
+
+        <!-- JOIN TEAM PANEL -->
+
+        <div id="joinPanel" class="panel" hidden>
+
+            <h3>Join Existing Team</h3>
+
+            <p>
+                Enter the unique invitation code
+                shared by your team leader.
+            </p>
+
+            <form id="joinTeamForm">
+
+                <div class="form-group">
+
+                    <label>Team Code *</label>
+
+                    <input
+                        type="text"
+                        name="team_code"
+                        placeholder="Example: HV-T-4M92AB"
+                        required>
+
+                </div>
+
+                <button type="submit">
+                    Join Team
+                </button>
+
+            </form>
+
+            <div id="joinResult"></div>
+
+        </div>
+
+
+        <!-- TEAM DETAILS PANEL -->
+
+        <div id="teamPanel" class="panel" hidden>
+
+            <h3>Your Team Details</h3>
+
+            <div id="teamDetails"></div>
+
+        </div>
+
+        <div id="globalMessage"
+             role="status"
+             aria-live="polite"></div>
+
+    </div>
+
+</section>   
     <!-- Contact -->
     <section class="contact">
 
@@ -212,3 +399,4 @@
 
 </body>
 </html>
+
